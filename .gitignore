@@ -1,0 +1,15 @@
+# Archivos del sistema
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de compilación de Swift / Xcode
+build/
+DerivedData/
+*.swp
+*.lock
+.swiftpm/
+.build/
+
+# Otros
+.DS_Store?
