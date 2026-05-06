@@ -163,4 +163,18 @@ class SplayTree {
         
         return nil
     }
+
+    /// Recorrido inorden (izquierda, raíz, derecha): en un BST por `id` deja los ids ordenados lexicográficamente.
+    /// No modifica el árbol; útil para depuración o comprobar el contenido sin pasar por el diccionario.
+    func idsEnInorden() -> [String] {
+        var resultado: [String] = []
+        func visitar(_ nodo: Nodo?) {
+            guard let nodo = nodo else { return }
+            visitar(nodo.izquierdo)
+            resultado.append(nodo.id)
+            visitar(nodo.derecho)
+        }
+        visitar(raiz)
+        return resultado
+    }
 }
